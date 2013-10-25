@@ -1,4 +1,4 @@
-require 'ar'
+require 'far'
 require 'bundler'
 require 'pp'
 Bundler.require(:default, :test)

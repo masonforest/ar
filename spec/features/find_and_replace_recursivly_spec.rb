@@ -4,7 +4,7 @@ describe 'ar' do
   it 'finds and replaces strings' do
     write('before.txt', 'before')
 
-    Ar::CLI.run('before', 'after', 'before.txt')
+    Far::CLI.run('before', 'after', 'before.txt')
 
     expect(read('before.txt')).to eq 'after'
   end
@@ -12,7 +12,7 @@ describe 'ar' do
   it 'finds and replaces regular expressions' do
     write('before.txt', ':key => :value')
 
-    Ar::CLI.run(':([^ ]*)(\s*)=>', '\1:', 'before.txt')
+    Far::CLI.run(':([^ ]*)(\s*)=>', '\1:', 'before.txt')
 
     expect(read('before.txt')).to eq 'key: :value'
   end
@@ -21,7 +21,7 @@ describe 'ar' do
     write('test/before1.txt', 'before1')
     write('test/subdirectory/before2.txt', 'before2')
 
-    Ar::CLI.run('before', 'after', 'test')
+    Far::CLI.run('before', 'after', 'test')
 
     expect(read('test/before1.txt')).to eq 'after1'
     expect(read('test/subdirectory/before2.txt')).to eq 'after2'

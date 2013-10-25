@@ -1,4 +1,4 @@
-module Ar
+module Far
   class CLI
     def run(*args)
       @args = *args

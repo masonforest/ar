@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'ar/version'
+require 'far/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "ar"
-  spec.version       = Ar::VERSION
+  spec.name          = "far"
+  spec.version       = Far::VERSION
   spec.authors       = ["Mason Fischer"]
   spec.email         = ["mason@thoughtbot.com"]
-  spec.description   = %q{A find and (re)place/(re)factor tool that uses (re)gualar expressions}
-  spec.summary       = %q{A find and (re)place/(re)factor tool that uses (re)gualar expressions}
-  spec.homepage      = "https://github.com/masonforest/re"
+  spec.description   = %q{A find and replace/refactor tool that uses regualar expressions}
+  spec.summary       = %q{A find and replace/refactor tool that uses regualar expressions}
+  spec.homepage      = "https://github.com/masonforest/far"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
